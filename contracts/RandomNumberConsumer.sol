@@ -52,7 +52,7 @@ contract RandomNumberConsumer is VRFConsumerBase {
         internal
         override
     {
-        randomResult = randomness;
+        randomResult = randomness.mod(50).add(1);
     }
 
     /**
