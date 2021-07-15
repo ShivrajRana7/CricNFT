@@ -191,5 +191,6 @@ def storeLastSeenId(lastSeenId, file_name):
 #     time.sleep(n)
 
 NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(
-    "2", "0x7c3a306e7e2adbc918ec8777d12335045471b110")
-api.update_status(status=NFTfetcher)
+    "1", "0x7c3a306e7e2adbc918ec8777d12335045471b110")
+api.update_status(
+    status="Hey All, Checkout our newest NFT on OpenSea. Link:" + NFTfetcher)
