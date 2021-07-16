@@ -1,3 +1,5 @@
+#from TwitterBot.retweetersScript import retweetersScraping
+
 import tweepy
 import time
 import subprocess
@@ -8,15 +10,15 @@ import OpenSeaFetcher
 #import RaribleFetcher
 
 from keys import *
-#import retweetersScript
-#import getWinners
+import retweetersScript
+import getWinners
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 # Change the Owner Name here in order to get admin access and privileges
-OWNER_NAME = "CricShot4"
+OWNER_NAME = "triquetraBot"
 GIVEAWAY_DATABASE = []
 # =====================================================================
 
@@ -82,26 +84,27 @@ def NFTTweet(trade):
 #     return data
 
 
-# def ProcessingRandomness(Tweet_ID):
-#     Limit = getWinners.returnLimit()
-#     cumulativeRandomness = import_csv('RandomnessSheet.csv')
-#     latestRandomness = cumulativeRandomness[-1]
-#     ranD = int(latestRandomness[0])
-#     ranDcopy = int(ranD)
-#     quot = ranD % int(Tweet_ID)
+def ProcessingRandomness(Tweet_ID):
+    Limit = getWinners.returnLimit()
+    cumulativeRandomness = 7  # fetch from web3py
+    # latestRandomness = cumulativeRandomness[-1]
+    # ranD = int(latestRandomness[0])
+    # ranDcopy = int(ranD)
+    # quot = ranD % int(Tweet_ID)
 
-#     while(len(str(ranD)) > len(str(int(Tweet_ID)))):
-#         ranD = ranD//int(Tweet_ID)
+    # while(len(str(ranD)) > len(str(int(Tweet_ID)))):
+    #     ranD = ranD//int(Tweet_ID)
 
-#     picker = ranD//(10**(len(str(ranD))-1))
-#     j = 0
-#     arr_idx = []
-#     for i in range(Limit):
-#         arr_idx.append(str(ranDcopy)[j:j+2])
-#         j += picker
-#         i += 1
+    # picker = ranD//(10**(len(str(ranD))-1))
+    # j = 0
+    # arr_idx = []
+    # for i in range(Limit):
+    #     arr_idx.append(str(ranDcopy)[j:j+2])
+    #     j += picker
+    #     i += 1
 
-#     return arr_idx
+    # return arr_idx
+    return cumulativeRandomness
 
 
 # NFT Tweet Reply
@@ -122,57 +125,58 @@ def storeLastSeenId(lastSeenId, file_name):
     return
 
 
-# def replyToTweets():
-#     print('CricShot is up and running...', flush=True)
+def replyToTweets():
+    print('CricShot is up and running...', flush=True)
 
-#     lastSeenId = retrieveLastSeenId(FILE_NAME)
+    lastSeenId = retrieveLastSeenId(FILE_NAME)
 
-#     mentions = api.mentions_timeline(lastSeenId, tweet_mode='extended')
-#     for mention in reversed(mentions):
-#         print(str(mention.id) + ' - ' + mention.full_text, flush=True)
-#         lastSeenId = mention.id
-#         storeLastSeenId(lastSeenId, FILE_NAME)
+    mentions = api.mentions_timeline(lastSeenId, tweet_mode='extended')
+    for mention in reversed(mentions):
+        print(str(mention.id) + ' - ' + mention.full_text, flush=True)
+        lastSeenId = mention.id
+        storeLastSeenId(lastSeenId, FILE_NAME)
 #         NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(
 #             "2", "0x7c3a306e7e2adbc918ec8777d12335045471b110")
 #         api.update_status(status=NFTfetcher)
     # if 'publicize' in mention.full_text.lower():
     #     msg = NFTTweet(mention.full_text.lower())
     #     api.update_status(msg, mention.id)
-    # elif (('giveaway' or '#giveaway') or ('chainlink' and ('giveaway' or '#giveaway'))) in mention.full_text.lower():
-    #     print('found Giveaway Thread!', flush=True)
-    #     if mention.user.screen_name == OWNER_NAME:
-    #         print('connecting to the giveaway thread...', flush=True)
+        if (('giveaway' or '#giveaway') or ('chainlink' and ('giveaway' or '#giveaway'))) in mention.full_text.lower():
+            print('found Giveaway Thread!', flush=True)
+            if mention.user.screen_name == OWNER_NAME:
+                print('connecting to the giveaway thread...', flush=True)
 
-    #         # ADD ACTIVATOR PYTHON SCRIPT
-    #         # Activator()
+                # ADD ACTIVATOR PYTHON SCRIPT
+                # Activator()
 
-    #         tweet = mention.full_text.lower()
-    #         subHash = '#'
-    #         giveawayLimit = '!'
-    #         keywords = [str(x) for x in tweet.split(" ")]
-    #         thread = [tweet for tweet in keywords if subHash in tweet]
-    #         Alert = [tweet for tweet in keywords if giveawayLimit in tweet]
-    #         retweetersScript.retweetersScraping(thread[0][1:])
-    #         Validators, Identity, Template = getWinners.randomGiveaway(
-    #             thread[0][1:], OWNER_NAME)
+                tweet = mention.full_text.lower()
+                subHash = '#'
+                giveawayLimit = '!'
+                keywords = [str(x) for x in tweet.split(" ")]
+                thread = [tweet for tweet in keywords if subHash in tweet]
+                Alert = [tweet for tweet in keywords if giveawayLimit in tweet]
+                print(thread[0][1:-1])
+                retweetersScript.retweetersScraping(thread[0][1:])
+                Validators, Identity, Template = getWinners.randomGiveaway(
+                    thread[0][1:], OWNER_NAME)
 
-    #         winners_indx = ProcessingRandomness(int(mention.id))
-    #         GIVEAWAY_DATABASE.append(thread[0][1:])
-    #         lis = ''
-    #         for i in range(0, len(winners_indx)):
-    #             lis += '@' + str(Validators[int(winners_indx[i])]) + ', '
-    #             api.send_direct_message(Identity[i], Template.format(
-    #                 name=Validators[int(winners_indx[i])]))
+                winners_indx = ProcessingRandomness(int(mention.id))
+                GIVEAWAY_DATABASE.append(thread[0][1:])
+                lis = ''
+                # for i in range(0, len(winners_indx)):
+                # processingrandomness web3py, fetch a number in int
+                lis = str(Validators[1])
+                #api.send_direct_message(Identity[i], Template.format(name=Validators[int(winners_indx[i])]))
 
-    #         api.update_status("Hey @" + mention.user.screen_name + ",\nWinners of today's giveaway are " +
-    #                           lis + ".\nDMs to avail the GPR tokens have been sent to winners.", mention.id)
-    #         api.create_favorite(mention.id)
+                api.update_status("Hey @" + mention.user.screen_name + ",\nWinner of today's giveaway is " +
+                                  lis + ".\nDMs to avail the NFT will be sent to winners.", mention.id)
+                api.create_favorite(mention.id)
 
-    #     else:
-    #         print('Authorization failed, ' + mention.user.screen_name +
-    #               ' does not have the necesarry credentials to activate the giveaway.', flush=True)
-    #         api.update_status('Hey @' + mention.user.screen_name + ", unfortunately you don't have the credentials to activate a giveaway. I would recommend you to join ChainLink to use this.\n P.S. I really appreciate you tagging me, thanks. Let me know if I can help you with anything else.", mention.id)
-    #         api.create_favorite(mention.id)
+            else:
+                print('Authorization failed, ' + mention.user.screen_name +
+                      ' does not have the necesarry credentials to activate the giveaway.', flush=True)
+                api.update_status('Hey @' + mention.user.screen_name + ", unfortunately you don't have the credentials to activate a giveaway. I would recommend you to join ChainLink to use this.\n P.S. I really appreciate you tagging me, thanks. Let me know if I can help you with anything else.", mention.id)
+                api.create_favorite(mention.id)
 
 
 # NFT DM Reply
@@ -185,12 +189,12 @@ def storeLastSeenId(lastSeenId, file_name):
 
 
 # Script Runner
-# while True:
-#     replyToTweets()
-#     n = random.randint(1, 10)
-#     time.sleep(n)
+while True:
+    replyToTweets()
+    n = random.randint(1, 10)
+    time.sleep(n)
 
-NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(
-    "1", "0x7c3a306e7e2adbc918ec8777d12335045471b110")
-api.update_status(
-    status="Hey All, Checkout our newest NFT on OpenSea. Link:" + NFTfetcher)
+# NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(
+#     "1", "0x7c3a306e7e2adbc918ec8777d12335045471b110")
+# api.update_status(
+#     status="Hey All, Checkout our newest NFT on OpenSea. Link:" + NFTfetcher)

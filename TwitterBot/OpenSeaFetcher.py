@@ -9,7 +9,7 @@ def OpenSeaFetchingSchema(token_id_of_nft, asset_contract_address_of_nft):
 
     response = requests.request("GET", url)
     # print(response.json())
-    #print(json.dumps(response.json()['permalink'], indent=4))
+    #print(json.dumps(response.json(), indent=4))
     return response.json()['permalink']
 
 
