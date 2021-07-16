@@ -1,6 +1,7 @@
 from web3 import Web3
 from web3.middleware import geth_poa_middleware
 import json
+import time
 
 
 w3 = Web3(Web3.HTTPProvider(
@@ -88,4 +89,5 @@ signed_tx = w3.eth.account.sign_transaction(
 txn_hash = w3.eth.send_raw_transaction(signed_tx.rawTransaction)
 txn_receipt = w3.eth.wait_for_transaction_receipt(txn_hash)
 print(transaction)
-print(contract_instance.functions.randomResult().call())
+time.sleep(90)
+print(contract_instance.functions.randomResult().call())  # add timer
