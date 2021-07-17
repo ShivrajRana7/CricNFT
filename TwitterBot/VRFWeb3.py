@@ -2,6 +2,7 @@ from web3 import Web3
 from web3.middleware import geth_poa_middleware
 import json
 import time
+import csv
 
 
 w3 = Web3(Web3.HTTPProvider(
@@ -81,13 +82,31 @@ abi = '''[
 
 contract_instance = w3.eth.contract(address=contract_address, abi=abi)
 
-transaction = contract_instance.functions.getRandomNumber().buildTransaction()
-transaction.update({'gas': 300000})
-transaction.update({'nonce': nonce})
-signed_tx = w3.eth.account.sign_transaction(
-    transaction, private_key)
-txn_hash = w3.eth.send_raw_transaction(signed_tx.rawTransaction)
-txn_receipt = w3.eth.wait_for_transaction_receipt(txn_hash)
-print(transaction)
-time.sleep(90)
-print(contract_instance.functions.randomResult().call())  # add timer
+
+def randomNumberCSV(inputFromBot):
+    with open('RandomnessSheet.csv', 'a', newline='') as f:
+        randomNum = csv.writer(f)
+        try:
+            if len(str(inputFromBot)) > 1 and float(inputFromBot) == True:
+                randomNum.writerow([inputFromBot])
+            else:
+                randomNum.writerow([inputFromBot])
+        except ValueError:
+            if len(inputFromBot) > 1:
+                randomNum.writerow([])
+
+
+def getRandomNumber():
+    transaction = contract_instance.functions.getRandomNumber().buildTransaction()
+    transaction.update({'gas': 300000})
+    transaction.update({'nonce': nonce})
+    signed_tx = w3.eth.account.sign_transaction(
+        transaction, private_key)
+    txn_hash = w3.eth.send_raw_transaction(signed_tx.rawTransaction)
+    txn_receipt = w3.eth.wait_for_transaction_receipt(txn_hash)
+    print(transaction)
+    time.sleep(90)
+    randomNumberCSV(contract_instance.functions.randomResult().call())
+
+
+getRandomNumber()
