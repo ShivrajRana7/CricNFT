@@ -169,7 +169,7 @@ def replyToTweets():
                 #api.send_direct_message(Identity[i], Template.format(name=Validators[int(winners_indx[i])]))
 
                 api.update_status("Hey @" + mention.user.screen_name + ",\nWinner of today's giveaway is " +
-                                  lis + ".\nDMs to avail the NFT will be sent to winners.", mention.id)
+                                  lis + ".\nDMs to avail the NFT will be sent to the winner.", mention.id)
                 api.create_favorite(mention.id)
 
             else:
