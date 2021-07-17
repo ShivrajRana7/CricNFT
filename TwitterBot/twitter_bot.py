@@ -12,6 +12,7 @@ import OpenSeaFetcher
 from keys import *
 import retweetersScript
 import getWinners
+import VRFWeb3
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
@@ -137,7 +138,7 @@ def replyToTweets():
             print('found Giveaway Thread!', flush=True)
             if mention.user.screen_name == OWNER_NAME:
                 print('connecting to the giveaway thread...', flush=True)
-
+                VRFWeb3.getRandomNumber()
                 # ADD ACTIVATOR PYTHON SCRIPT
                 # Activator()
 
