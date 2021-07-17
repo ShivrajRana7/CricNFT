@@ -18,7 +18,7 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 # Change the Owner Name here in order to get admin access and privileges
-OWNER_NAME = "triquetraBot"
+OWNER_NAME = "AnnouncerCric"
 GIVEAWAY_DATABASE = []
 # =====================================================================
 
