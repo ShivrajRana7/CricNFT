@@ -33,9 +33,13 @@ def retweetersScraping(TWEET_ID):
             #f_out.write(str(json.dumps(retweets, indent=4)))
             f_out.write('%s,%s\n' % (r, i))
 
+        numberOfRetweeters = len(retweeters)
+
+    return numberOfRetweeters
+
     # print('done')
 
     #print(json.dumps(retweeters, indent=4))
 
 
-# retweetersScraping(1368350709423497217)
+# print(retweetersScraping(1415644338495770624))

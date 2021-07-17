@@ -20,6 +20,7 @@ api = tweepy.API(auth)
 # Change the Owner Name here in order to get admin access and privileges
 OWNER_NAME = "AnnouncerCric"
 GIVEAWAY_DATABASE = []
+noOfRetweeters = int()
 # =====================================================================
 
 
@@ -71,40 +72,30 @@ def NFTTweet(trade):
 # NFT Giving Random Giveaway
 
 
-# def import_csv(csvfilename):
-#     data = []
-#     with open(csvfilename, "r", encoding="utf-8", errors="ignore") as scraped:
-#         reader = csv.reader(scraped, delimiter=',')
-#         row_index = 0
-#         for row in reader:
-#             if row:
-#                 row_index += 1
-#                 columns = [row[0]]
-#                 data.append(columns)
-#     return data
+def import_csv(csvfilename):
+    data = []
+    with open(csvfilename, "r", encoding="utf-8", errors="ignore") as scraped:
+        reader = csv.reader(scraped, delimiter=',')
+        row_index = 0
+        for row in reader:
+            if row:
+                row_index += 1
+                columns = [row[0]]
+                data.append(columns)
+    return data
 
 
 def ProcessingRandomness(Tweet_ID):
+    global noOfRetweeters
     Limit = getWinners.returnLimit()
-    cumulativeRandomness = 7  # fetch from web3py
-    # latestRandomness = cumulativeRandomness[-1]
-    # ranD = int(latestRandomness[0])
-    # ranDcopy = int(ranD)
-    # quot = ranD % int(Tweet_ID)
+    cumulativeRandomness = import_csv(
+        'RandomnessSheet.csv')  # fetch from web3py
+    latestRandomness = cumulativeRandomness[-1]
+    ranD = int(latestRandomness[0])
+    quot = ranD % noOfRetweeters
 
-    # while(len(str(ranD)) > len(str(int(Tweet_ID)))):
-    #     ranD = ranD//int(Tweet_ID)
-
-    # picker = ranD//(10**(len(str(ranD))-1))
-    # j = 0
-    # arr_idx = []
-    # for i in range(Limit):
-    #     arr_idx.append(str(ranDcopy)[j:j+2])
-    #     j += picker
-    #     i += 1
-
-    # return arr_idx
-    return cumulativeRandomness
+    return quot
+    # return cumulativeRandomness
 
 
 # NFT Tweet Reply
@@ -126,6 +117,7 @@ def storeLastSeenId(lastSeenId, file_name):
 
 
 def replyToTweets():
+    global noOfRetweeters
     print('CricShot is up and running...', flush=True)
 
     lastSeenId = retrieveLastSeenId(FILE_NAME)
@@ -156,7 +148,8 @@ def replyToTweets():
                 thread = [tweet for tweet in keywords if subHash in tweet]
                 Alert = [tweet for tweet in keywords if giveawayLimit in tweet]
                 print(thread[0][1:-1])
-                retweetersScript.retweetersScraping(thread[0][1:])
+                noOfRetweeters = retweetersScript.retweetersScraping(
+                    thread[0][1:])
                 Validators, Identity, Template = getWinners.randomGiveaway(
                     thread[0][1:], OWNER_NAME)
 
@@ -165,7 +158,7 @@ def replyToTweets():
                 lis = ''
                 # for i in range(0, len(winners_indx)):
                 # processingrandomness web3py, fetch a number in int
-                lis = str(Validators[1])
+                lis = str(Validators[int(winners_indx)])
                 #api.send_direct_message(Identity[i], Template.format(name=Validators[int(winners_indx[i])]))
 
                 api.update_status("Hey @" + mention.user.screen_name + ",\nWinner of today's giveaway is " +
