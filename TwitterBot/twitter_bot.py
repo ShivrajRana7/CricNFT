@@ -183,18 +183,18 @@ def replyToTweets():
 
 
 # Script Runner
-# while True:
-#     replyToTweets()
-#     n = random.randint(1, 10)
-#     time.sleep(n)
+while True:
+    replyToTweets()
+    n = random.randint(1, 10)
+    time.sleep(n)
 
-NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(
-    "3", "0x7c3a306e7e2adbc918ec8777d12335045471b110")
-# api.update_status(
-#     status="Hey All, Checkout our newest NFT on OpenSea. Link:" + NFTfetcher)
+# NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(
+#     "3", "0x7c3a306e7e2adbc918ec8777d12335045471b110")
+# # api.update_status(
+# #     status="Hey All, Checkout our newest NFT on OpenSea. Link:" + NFTfetcher)
 
-# api.media_upload(
-#     "./Image/pic1.jpg")
+# # api.media_upload(
+# #     "./Image/pic1.jpg")
 
-api.update_with_media(
-    "pic1.jpg", status="Hey All, Checkout our newest NFT on OpenSea. Link:" + NFTfetcher)
+# api.update_with_media(
+#     "pic1.jpg", status="Hey All, participate in our latest NFT giveaway by retweeting this tweet and following us! \n Check it out on OpenSea Link: " + NFTfetcher)
