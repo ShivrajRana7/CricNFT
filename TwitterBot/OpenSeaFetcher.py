@@ -17,6 +17,16 @@ def OpenSeaFetchingSchema(token_id_of_nft, asset_contract_address_of_nft):
     return response.json()['permalink']
 
 
+def retrieveCollection(asset_owner):
+    url = "https://testnets-api.opensea.io/api/v1/assets/"
+    querystring = {"owner": asset_owner,
+                   "order_direction": "desc", "offset": "0", "limit": "20"}
+
+    response = requests.request("GET", url, params=querystring)
+    print(json.dumps(response.json(), indent=4))
+    return response
+
+
 def getImage(url):
     with open('pic1.jpg', 'wb') as handle:
         response = requests.get(url, stream=True)
@@ -40,3 +50,4 @@ def getVid(url):
 
 
 #OpenSeaFetchingSchema("3", "0x7c3a306e7e2adbc918ec8777d12335045471b110")
+retrieveCollection("0x0e1aFDCD7BCa770aD9DD17d04c6F82816B156D47")
