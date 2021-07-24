@@ -2,6 +2,7 @@ import St from './ST.js'
 import Web3 from'web3';
 import {useState,useEffect} from 'react';
 import './App.css';
+import Ms from './MS.js';
 
 function App() {
   
@@ -45,7 +46,7 @@ function App() {
 
   return (
     <div className="app">
-      <St />
+      <Ms />
     </div>
   );
 
