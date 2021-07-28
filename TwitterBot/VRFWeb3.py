@@ -109,4 +109,4 @@ def getRandomNumber():
     randomNumberCSV(contract_instance.functions.randomResult().call())
 
 
-getRandomNumber()
+# getRandomNumber()
