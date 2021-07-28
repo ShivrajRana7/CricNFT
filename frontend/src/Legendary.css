@@ -1,14 +1,14 @@
 .div{
 	background: #020305;
 	width: 100%;
-	min-height: 100vh;
+	height: 250vh;
+}
+.div-1{
+	margin-top: 60px;
+	text-align: center;
 }
 .div-1 hr{
 	padding: 5px;
-}
-.div-2{
-	margin: 50px 0;
-    color: #ccc;
 }
 .div-3{
 	margin: 100px;
@@ -21,6 +21,6 @@
 .div-3 .row{
 	margin-top: 100px;
 	display: grid;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: auto auto auto auto auto;
     grid-row-gap: 100px;
 }

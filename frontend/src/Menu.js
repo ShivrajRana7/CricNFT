@@ -1,22 +1,22 @@
 import React from 'react';
-import {Navbar,Nav,Container} from 'react-bootstrap';
+import { Navbar,Nav,Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import Marketplace from './Marketplace';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Menu() {
+
 	return(
-		<Navbar className="">
-        	<Container>
-          		<Navbar.Brand href="#" style={{color : "#ffffff"}}>CRIC<span style={{color:"#51E8EF"}}>SHOT</span></Navbar.Brand>          		
-            		<Nav className="me-auto">
-              			<Nav.Link href="Marketplace.js"  style={{color : "#ffffff"}}>MARKETPLACE</Nav.Link>
-              			<Nav.Link href="#"  style={{color : "#ffffff"}}>GIVEAWAYS</Nav.Link>
-              			<Nav.Link href="#"  style={{color : "#ffffff"}}>ABOUT</Nav.Link>
-            		</Nav>
-            		<Nav>
-            			<Nav.Link href="#" className=""  style={{color : "#ffffff"}}>CONNECT WALLET</Nav.Link>
-            		</Nav>
-        	</Container>
-      	</Navbar>
+			<Navbar>
+  			<Container>
+    			<Navbar.Brand as={Link} to="/" style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>C</span>RIC<span style={{color:"#51E8EF"}}>S</span>HOT</Navbar.Brand>
+    				<Nav className="mr-auto">
+        				<Nav.Link as={Link} to="/Marketplace" style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>M</span>ARKETPLACE</Nav.Link>
+        				<Nav.Link as={Link} to="/Giveaways" style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>G</span>IVEAWAYS</Nav.Link>
+						<Nav.Link  style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>A</span>BOUT</Nav.Link>
+      				</Nav>
+    		</Container>
+		</Navbar>	
 	)
 }
 

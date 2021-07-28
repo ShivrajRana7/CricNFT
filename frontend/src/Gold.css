@@ -21,12 +21,6 @@
 .div-3 .row{
 	margin-top: 100px;
 	display: grid;
-	grid-template-columns: auto auto auto auto auto;
+	grid-template-columns: auto auto auto;
     grid-row-gap: 100px;
-}/*
-.footer{
-	color: #ffffff;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}*/
+}
