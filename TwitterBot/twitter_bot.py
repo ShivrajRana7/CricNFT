@@ -188,8 +188,7 @@ def replyToTweets():
 #     n = random.randint(1, 10)
 #     time.sleep(n)
 
-NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(
-    "1", "0x91a3E531Ee82e2c6aAb5F8Ee8e3643E874182024")
+NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(3)
 # api.update_status(
 #     status="Hey All, checkout our latest NFT, Rishabh Pant's Historical Winning Shot at Gabba!\n Buy it now on OpenSea, Link: " + NFTfetcher)
 
@@ -197,4 +196,4 @@ NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(
 # #     "./Image/pic1.jpg")
 
 api.update_with_media(
-    "pic1.jpg", status="Hey All, checkout our latest NFT, Hardik Pandya's Helicopter Shot in IPL!\nBuy it now on OpenSea, Link: " + NFTfetcher)
+    "pic1.jpg", status="Hey All, checkout our latest NFT, " + NFTfetcher + "\nBuy it now on OpenSea")
