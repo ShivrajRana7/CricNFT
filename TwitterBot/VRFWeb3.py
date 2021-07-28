@@ -6,7 +6,7 @@ import csv
 
 
 w3 = Web3(Web3.HTTPProvider(
-    'https://rinkeby.infura.io/v3/a12326907af44f64a683a068d3b54de2'))
+    'https://rpc-mumbai.matic.today'))
 
 w3.middleware_onion.inject(geth_poa_middleware, layer=0)
 #w3.eth.default_account = w3.eth.accounts[0]
@@ -15,18 +15,13 @@ nonce = w3.eth.get_transaction_count(
 
 print(w3.isConnected())
 
-contract_address = "0x79e036B14818492C101175cAF85e280D6da5F6ec"
+contract_address = "0x893A22865095fe6Fa1493A0671132cD13990BD3d"
 private_key = "8d0dfa4ce5ae81f16a204f65eba2b034eb429a1fa37108e6ddf64ffda7f1a8ca"
 
 # with open("RandomNumberConsumer.json") as f:
 #     abi = json.load(f)
 
 abi = '''[
-	{
-		"inputs": [],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
 	{
 		"inputs": [],
 		"name": "getRandomNumber",
@@ -38,19 +33,6 @@ abi = '''[
 			}
 		],
 		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "randomResult",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -73,9 +55,27 @@ abi = '''[
 	},
 	{
 		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
 		"name": "withdrawLink",
 		"outputs": [],
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "randomResult",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	}
 ]'''
@@ -109,4 +109,4 @@ def getRandomNumber():
     randomNumberCSV(contract_instance.functions.randomResult().call())
 
 
-# getRandomNumber()
+getRandomNumber()
