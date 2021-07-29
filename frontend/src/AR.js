@@ -6,15 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Ar(){
 
     return(
+
+		<div className="ar">
 		<Container>
-        <div className="div">
 			
-      		<div className="div-1">
+      		<section className="section">
       			<hr />
-				{/* <img src="Images/ms.png" /> */}
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>A</span>R</h1>
+				<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>A</span>MBATI <span style={{color:"#51E8EF"}}>R</span>AYUDU</h1>
       			<hr />
-      		</div>
+      		</section>
 
             <div className="div-2">
                 <p><span style={{color:"#51E8EF"}}>A</span>MBATI <span style={{color:"#51E8EF"}}>R</span>AYUDU is an Indian cricketer who was born on 23th of September 1985, even though he occasionally keeps wickets, and bowls right-arm off breaks, his main role is being a right-handed middle-order batsman. Currently, in domestic cricket he captains Hyderabad in Ranji Trophy.</p>
@@ -50,8 +50,9 @@ function Ar(){
 
             <hr />
 			
-		</div>
 		</Container>
+
+		</div>
 	)
 }
 

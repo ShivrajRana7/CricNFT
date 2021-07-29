@@ -8,13 +8,12 @@ function Legendary(){
 	return(
 
 		<Container>
-		<div className="div">
-
-      		<div className="div-1">
+			<div className="legendary-tier">
+      		<section className="section">
       			<hr />
       			<h1 style={{color : "#ffffff"}}><span style={{color:"#0275d8"}}>L</span>EGENDARY <span style={{color:"#0275d8"}}>T</span>IER</h1>
       			<hr />
-      		</div>
+      		</section>
 
       		<div className="div-3">
       			<div className="row">
@@ -40,9 +39,7 @@ function Legendary(){
 
 				</div>
       		</div>
-
-		</div>
-
+			</div> 
 		</Container>
 	)
 }

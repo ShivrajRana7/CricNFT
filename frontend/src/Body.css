@@ -6,26 +6,27 @@
     color: #ffffff;
 }
 .video{
-   margin-top: 50px;
    display: flex;
    justify-content: center;
    align-items: center;
 }
 .card{
     background: #000000;
-    width: 50rem;
+    width: 55rem;
     height: 25rem;
 }
 .btn{
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
  }
  .footer{
-     margin: 20px 0;
      display: flex;
-     justify-content: space-between;
+     justify-content: space-around;
      align-items: center;
-     color: #ffffff;
+ }
+ .footer .footer-right img{
+    width: 200px;
+    height: 100px;
  }

@@ -1,20 +1,21 @@
 import React from 'react';
 import {Navbar,Nav,Container} from 'react-bootstrap';
-import './MS.css';
+import './SR.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Sr(){
 
     return(
-		<Container>
-        <div className="div">
+
+		<div className="sr">
 			
-      		<div className="div-1">
+		<Container>
+        
+      		<section className="section">
       			<hr />
-				{/* <img src="Images/ms.png" /> */}
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>S</span>R</h1>
+      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>S</span>URESH <span style={{color:"#51E8EF"}}>R</span>AINA</h1>
       			<hr />
-      		</div>
+      		</section>
 
             <div className="div-2">
                 <p><span style={{color:"#51E8EF"}}>S</span>URESH <span style={{color:"#51E8EF"}}>R</span>AINA <span style={{color:"#51E8EF"}}>D</span>HONI is arguably one of India's finest limited overs batsman in the last one decade. Although he has hung up his boots now, the southpaw still commands respect across the cricketing channels.</p>
@@ -43,8 +44,9 @@ function Sr(){
 
             <hr />
 			
-		</div>
 		</Container>
+
+		</div>
 	)
 }
 

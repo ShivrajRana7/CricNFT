@@ -1,17 +1,11 @@
-/* .div{
-	background: #020305;
-	width: 100%;
-	min-height: 200vh;
-} */
-.div-1{
-	margin-top: 60px;
-	text-align: center;
-}
-.div-1 hr{
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+.section hr{
 	padding: 5px;
 }
 .tier{
 	margin-top: 100px;
+	font-family: 'Orbitron', sans-serif;
 }
 .tier hr{
 	padding: 3px;
@@ -38,6 +32,7 @@
 }
 .player{
 	margin-top: 50px;
+	font-family: 'Orbitron', sans-serif;
 }
 .player hr{
 	padding: 3px;

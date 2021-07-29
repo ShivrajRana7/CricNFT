@@ -6,15 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Rj(){
 
     return(
+
+        <div className="rj">
+
 		<Container>
-        <div className="div">
-			
-      		<div className="div-1">
+        
+      		<section className="section">
       			<hr />
-				{/* <img src="Images/ms.png" /> */}
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>R</span>J</h1>
+                  <h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>R</span>AVINDRA <span style={{color:"#51E8EF"}}>J</span>ADEJA</h1>
       			<hr />
-      		</div>
+      		</section>
 
             <div className="div-2">
                 <p><span style={{color:"#51E8EF"}}>R</span>AVINDRA <span style={{color:"#51E8EF"}}>J</span>ADEJA is an Indian cricketer who represents the country in international cricket. On the domestic level, Jadeja plays first class cricket for Saurashtra.</p>
@@ -63,8 +64,9 @@ function Rj(){
 
             <hr />
 			
-		</div>
 		</Container>
+
+        </div>
 	)
 }
 

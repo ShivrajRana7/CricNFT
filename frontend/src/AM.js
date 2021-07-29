@@ -6,15 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Am(){
 
     return(
-		<Container>
-        <div className="div">
+
+		<div className="am">
 			
-      		<div className="div-1">
+		<Container>
+
+      		<section className="section">
       			<hr />
-				{/* <img src="Images/ms.png" /> */}
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>A</span>M</h1>
+				<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>A</span>MIT <span style={{color:"#51E8EF"}}>M</span>ISHRA</h1>
       			<hr />
-      		</div>
+      		</section>
 
             <div className="div-2">
                 <p><span style={{color:"#51E8EF"}}>A</span>MIT <span style={{color:"#51E8EF"}}>M</span>ISHRA is an Indian leg spinner who plays for Haryana in the Ranji Trophy. He was born on 24th November 1982, and hails from Delhi. He has played for the Indian team in 68 games across all formats. Mishra is an attacking right-arm leg break bowler and can also prove to be a tail-ender batsman when called upon. An accurate bowler, he relies on the flight of the ball and a big leg-break, which is his stock delivery.</p>
@@ -42,9 +43,10 @@ function Am(){
       		</div>
 
             <hr />
-			
-		</div>
+	
 		</Container>
+	
+		</div>
 	)
 }
 

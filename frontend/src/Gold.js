@@ -6,15 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Gold(){
 
 	return(
-
+		<div className="gold-tier">
 		<Container>
-		<div className="div">
-
-      		<div className="div-1">
+			
+      		<section className="section">
       			<hr />
       			<h1 style={{color : "#ffffff"}}><span style={{color:"#FFD700"}}>G</span>OLD <span style={{color:"#FFD700"}}>T</span>IER</h1>
       			<hr />
-      		</div>
+      		</section>
 
       		<div className="div-3">
       			<div className="row">
@@ -70,10 +69,10 @@ function Gold(){
 
 				</div>
       		</div>
-
-		</div>
-
+			<br />
+			<hr />
 		</Container>
+		</div>
 	)
 }
 

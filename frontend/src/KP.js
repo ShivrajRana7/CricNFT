@@ -6,15 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Kp(){
   
     return(
+
+		<div className="kp">
+
 		<Container>
-        <div className="div">
-			
-      		<div className="div-1">
+        			
+      		<section className="section">
       			<hr />
-				{/* <img src="Images/ms.png" /> */}
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>K</span>P</h1>
+				<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>K</span>IERON <span style={{color:"#51E8EF"}}>P</span>OLLARD</h1>
       			<hr />
-      		</div>
+      		</section>
 
             <div className="div-2">
                 <p><span style={{color:"#51E8EF"}}>K</span>IERON <span style={{color:"#51E8EF"}}>P</span>OLLARD is one of the most destructive batsman around the globe, a man who can turn down any bowling line-up on his day. He is a right handed batsman who usually bats in the lower middle order and bowls medium pace for West Indies. He is known for his lethal batting and brilliant fielding for West Indies, Mumbai Indians and some other club teams.</p>
@@ -46,8 +47,9 @@ function Kp(){
 
             <hr />
 			
-		</div>
 		</Container>
+	
+		</div>
 	)
 }
 

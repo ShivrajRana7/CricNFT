@@ -6,15 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Ps(){
 
     return(
+
+        <div className="ps">
+
 		<Container>
-        <div className="div">
-			
-      		<div className="div-1">
+        			
+      		<section className="section">
       			<hr />
-				{/* <img src="Images/ms.png" /> */}
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>P</span>S</h1>
+      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>P</span>RITHIVI <span style={{color:"#51E8EF"}}>S</span>HAW</h1>
       			<hr />
-      		</div>
+      		</section>
 
             <div className="div-2">
                 <p><span style={{color:"#51E8EF"}}>P</span>RITHIVI <span style={{color:"#51E8EF"}}>S</span>HAW is one of the most talented Indian openers to come through the ranks in recent times. The swashbuckling opener burst onto the scene after playing a marathon 546-runs inning in a Shield match and since then has only got better and better.</p>
@@ -50,8 +51,9 @@ function Ps(){
 
             <hr />
 			
-		</div>
 		</Container>
+
+        </div>
 	)
 }
 

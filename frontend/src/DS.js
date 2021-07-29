@@ -6,15 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Ds(){
 
     return(
+
+		<div className="ds">
+
 		<Container>
-        <div className="div">
-			
-      		<div className="div-1">
+        			
+      		<section className="section">
       			<hr />
-				{/* <img src="Images/ms.png" /> */}
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>D</span>S</h1>
+				<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>D</span>WAYNE <span style={{color:"#51E8EF"}}>S</span>MITH</h1>
       			<hr />
-      		</div>
+      		</section>
 
             <div className="div-2">
                 <p><span style={{color:"#51E8EF"}}>D</span>WAYNE <span style={{color:"#51E8EF"}}>S</span>MITH, , a former Windies international cricketer, was born on 12th of April 1983. A right-handed opening batsman and a part time right-arm medium pacer, he is known for his destructive ability to strike the ball hard and take matches away from oppositions.</p>
@@ -43,8 +44,9 @@ function Ds(){
 
             <hr />
 			
-		</div>
 		</Container>
+
+		</div>
 	)
 }
 

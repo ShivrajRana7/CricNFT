@@ -1,5 +1,7 @@
 import Menu from './Menu.js';
 import Marketplace from './Marketplace.js';
+import Giveaway from './Giveaway.js';
+import About from './About.js';
 import Slider from './Body.js';
 import Gold from './Gold.js';
 import Silver from './Silver.js';
@@ -70,6 +72,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Slider} />
           <Route path="/Marketplace" component={Marketplace} />
+          <Route path="/giveaway" component={Giveaway} />
+          <Route path="/about" component={About} />
           <Route path="/gold-tier" component={Gold} />
           <Route path="/silver-tier" component={Silver} />
           <Route path="/bronze-tier" component={Bronze} />

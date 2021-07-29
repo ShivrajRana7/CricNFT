@@ -6,14 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Hp(){
 
     return(
-		<Container>
-        <div className="div">
 
-      		<div className="div-1">
+		<div className="hp">
+		<Container>
+        
+      		<section className="section">
       			<hr />
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>H</span>P</h1>
+      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>H</span>ARDIK <span style={{color:"#51E8EF"}}>P</span>ANDYA</h1>
       			<hr />
-      		</div>
+      		</section>
 
 			<div className="div-2">
 				<p><span style={{color:"#51E8EF"}}>H</span>ARDIK <span style={{color:"#51E8EF"}}>P</span>ANDYA is the perfect modern-day cricketer. He can strike the ball big, roll his arm over decently and is a livewire in the field. It is a combination of skills India has long waited for since the retirement of Kapil Dev. Irfan Pathan gave them hope for a while but then lost his mojo and soon disappeared in the wilderness. India will wish that Pandya keeps working on his game and ends the country’s search for a seam-bowling all-rounder.</p>
@@ -39,10 +40,10 @@ function Hp(){
 
             <hr />
 
-		</div>
-
 		</Container>
-    )
+    
+		</div>
+	)
 }
 
 export default Hp;

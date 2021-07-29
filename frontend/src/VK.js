@@ -6,14 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Vk(){
 
     return(
-		<Container>
-        <div className="div">
 
-      		<div className="div-1">
+		<div className="vk">
+		<Container>
+
+      		<section className="section">
       			<hr />
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>V</span>K</h1>
+      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>V</span>IRAT <span style={{color:"#51E8EF"}}>K</span>HOLI</h1>
       			<hr />
-      		</div>
+      		</section>
             
               <div className="div-2">
                 <p><span style={{color:"#51E8EF"}}>V</span>IRAT <span style={{color:"#51E8EF"}}>K</span>HOLI or <span style={{color:"#51E8EF"}}>R</span>UN-<span style={{color:"#51E8EF"}}>M</span>ACHINE is an Indian international cricket player. He is a middle order batsman, who can also open the batting.</p>
@@ -59,8 +60,9 @@ function Vk(){
 
             <hr />
 
-		</div>
 		</Container>
+
+		</div>
 	)
 }
 

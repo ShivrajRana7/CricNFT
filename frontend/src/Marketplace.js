@@ -9,11 +9,11 @@ function Marketplace(){
 	return(
 
 			<Container>
-      		<div className="div-1">
+      		<section className="section">
       			<hr />
       			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>E</span>XPLORE <span style={{color:"#51E8EF"}}>T</span>HE <span style={{color:"#51E8EF"}}>M</span>ARKETPLACE</h1>
       			<hr />
-      		</div>
+      		</section>
 
       		<div className="tier">
 				<h3 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>S</span>EARCH <span style={{color:"#51E8EF"}}>B</span>Y <span style={{color:"#51E8EF"}}>T</span>IERS</h3>

@@ -6,15 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Ms(){
 
     return(
-		<Container>
-        <div className="div">
-			
-      		<div className="div-1">
+
+		<div className="msd">
+		<Container className="container">
+      		<section className="section">
       			<hr />
-				{/* <img src="Images/ms.png" /> */}
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>M</span>S</h1>
+				<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>M</span>AHINDRA<span style={{color:"#51E8EF"}}>S</span>INGH  <span style={{color:"#51E8EF"}}>D</span>HONI</h1>
       			<hr />
-      		</div>
+      		</section>
 
             <div className="div-2">
                 <p><span style={{color:"#51E8EF"}}>M</span>AHENDRA <span style={{color:"#51E8EF"}}>S</span>INGH <span style={{color:"#51E8EF"}}>D</span>HONI or <span style={{color:"#51E8EF"}}>C</span>APTIAN-<span style={{color:"#51E8EF"}}>C</span>OOL, one of the most dynamic captain on the field , a personality I truly adore. <span style={{color:"#51E8EF"}}>D</span>HONI is known as one of the best ODI captain the game of cricket has seen and will forever be for a very long time. Some of his decisions on the field will make you scratch your head. People think he is a person who always follow his instincts, makes decision by his gut feelings and what not but in my opinion he is the better observer of the game.</p>
@@ -66,9 +65,8 @@ function Ms(){
       		</div>
 
             <hr />
-			
-		</div>
 		</Container>
+		</div>
 	)
 }
 

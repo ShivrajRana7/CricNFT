@@ -7,13 +7,15 @@ function Rp(){
 
     return(
 
+		<div className="rp">
+
 		<Container>
-        <div className="div">
-      		<div className="div-1">
+        
+      		<section className="section">
       			<hr />
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>R</span>P</h1>
+      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>R</span>ISHABH <span style={{color:"#51E8EF"}}>P</span>ANT</h1>
       			<hr />
-      		</div>
+      		</section>
 			
 			<div className="div-2">
 				<p><span style={{color:"#51E8EF"}}>R</span>ISHABH <span style={{color:"#51E8EF"}}>P</span>ANT belongs to the Adam Gilchrist school of Cricketology, a dashing left-handed batsman who keeps wickets as well for his side. Originally from Uttarakhand, Pant had to shift bases quite a few times from a tender age as he targeted playing cricket at the highest level. It was the 2016 U-19 World Cup that brought him fame across the country. He smashed a record-breaking fifty against Nepal while also racking up a ton against Namibia soon after.</p>
@@ -39,9 +41,9 @@ function Rp(){
       		</div>
 
             <hr />
+		</Container>
 
 		</div>
-		</Container>
     )
 }
 

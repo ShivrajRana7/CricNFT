@@ -6,15 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Rs(){
 
     return(
-		<Container>
 
-        <div className="div">
-			<div className="div-1">
+		<div className="rs">
+		<Container>
+			<section className="section">
       			<hr />
-				{/* <img src="Images/sachin.png" /> */}
-      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>R</span>S</h1>
+      			<h1 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>R</span>OHIT <span style={{color:"#51E8EF"}}>S</span>HARMA</h1>
       			<hr />
-      		</div>
+      		</section>
 
             <div className="div-2">
                 <p><span style={{color:"#51E8EF"}}>R</span>OHIT <span style={{color:"#51E8EF"}}>S</span>HARMA or <span style={{color:"#51E8EF"}}>H</span>IT-<span style={{color:"#51E8EF"}}>M</span>AN is a right-handed opening batsman and bowls right-arm off break occasionally. Rohit is widely popular for his aggressive style of batting where he likes to take the charge to the bowler. </p>
@@ -71,9 +70,10 @@ function Rs(){
       		</div>
 
             <hr />
-		</div>
 		
 		</Container>
+
+		</div>
     )
 }
 

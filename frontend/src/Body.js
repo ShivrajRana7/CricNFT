@@ -2,6 +2,7 @@ import React from 'react';
 import './Body.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Slider(){
 	return(
@@ -23,19 +24,23 @@ function Slider(){
 				</div>
 
 				<div className="btn">
-						<Button>START COLLECTION</Button>
+						<Link to="/Marketplace" style={{textDecoration : "none"}}><Button>START COLLECTION</Button></Link>
 				</div>
-
-				<div className="screenshot">
-					<h3 style={{color : "#ffffff"}}>Twitter</h3>
-				</div>
+				<br />
 				<br />
 				<hr />
 				
 				<div className="footer">
-					<span>Marketplace</span>
-					<span>Giveaways</span>
-					<span>About</span>
+					{/* <div className="footer-left">
+						<Link to="/Marketplace" style={{ textDecoration: 'none' }}><span style={{color : "#ffffff"}}>Marketplace</span></Link><br /><br />
+						<Link to="/giveaway" style={{ textDecoration: 'none' }}><span style={{color : "#ffffff"}}>Giveaways</span></Link><br /><br />
+						<Link to="/about" style={{ textDecoration: 'none' }}><span style={{color : "#ffffff"}}>About</span></Link>
+					</div> */}
+					
+					<div className="footer-right">
+						{/* <img src="./Images/cricshot.png" /><br /> */}
+						<small className="small" style={{color : "#ffffff"}}>&#169; 2021 CRICSHOT. ALL RIGHTS ARE RESERVED</small>
+					</div>
 				</div>
 			</Container>
 		</>
