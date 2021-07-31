@@ -160,8 +160,9 @@ def replyToTweets():
                 # for i in range(0, len(winners_indx)):
                 # processingrandomness web3py, fetch a number in int
                 lis = str(Validators[int(winners_indx)])
-                #api.send_direct_message(Identity[i], Template.format(name=Validators[int(winners_indx[i])]))
-
+                userID = api.get_user(lis)
+                api.send_direct_message(userID.id_str, Template.format(
+                    name=Validators[int(winners_indx)]))
                 api.update_status("Hey @" + mention.user.screen_name + ",\nWinner of today's giveaway is @" +
                                   lis + ".\nDMs to avail the NFT will be sent to the winner.", mention.id)
                 api.create_favorite(mention.id)
@@ -183,17 +184,17 @@ def replyToTweets():
 
 
 # Script Runner
-# while True:
-#     replyToTweets()
-#     n = random.randint(1, 10)
-#     time.sleep(n)
+while True:
+    replyToTweets()
+    n = random.randint(1, 10)
+    time.sleep(n)
 
-NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(3)
-# api.update_status(
-#     status="Hey All, checkout our latest NFT, Rishabh Pant's Historical Winning Shot at Gabba!\n Buy it now on OpenSea, Link: " + NFTfetcher)
+# NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(1)
+# # api.update_status(
+# #     status="Hey All, checkout our latest NFT, Rishabh Pant's Historical Winning Shot at Gabba!\n Buy it now on OpenSea, Link: " + NFTfetcher)
 
-# # api.media_upload(
-# #     "./Image/pic1.jpg")
+# api.update_with_media("pic1.jpg", status="Hey All, Participate to our latest NFT Giveaway!! " +
+#                       NFTfetcher + "\nTo participate, all you have to retweet this tweet and follow our account!")
 
-api.update_with_media(
-    "pic1.jpg", status="Hey All, checkout our latest NFT, " + NFTfetcher + "\nBuy it now on OpenSea")
+# # api.update_with_media(
+# #     "pic1.jpg", status="Hey All, checkout our latest NFT, " + NFTfetcher + "\nBuy it now on OpenSea")

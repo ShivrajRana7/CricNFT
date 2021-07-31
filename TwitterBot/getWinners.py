@@ -81,7 +81,7 @@ def randomGiveaway(TWEET_ID, OWNER_NAME):
     #     print('@%s' % i)
 
     template = """
-    Hi @{name},\nThank you for participating in the giveaway of ChainLink.\nHere's the uniswap address of the ETH-GPR Pool that you will use to avail your GPR tokens: 0x031e848a47e45d716aa8abedfa715307c8b9dda2.\nTo get it\n1) Make your metamask wallet\n2) Go to Uniswap. https://app.uniswap.org/#/swap\n3) Connect your Metamask wallet\n4) Set to Goerli Testnet in your Metamask Wallet\n5) Send your Metamask Wallet address in this chat like this (#EthAddress):\ne.g. #0x4CAdaFc96CdB5d86c96aD92a872767FB525C8027\nI hope you find it useful!\nPlease get in touch if you have any questions.\n\nFrom,\nCleopatra.
+    Hi @{name},\nThank you for participating in the giveaway of CricShot.\nTo get the NFT\n1) Make your metamask wallet\n2) Go to your Metamask wallet\n3) Set to Mumbai Testnet in your Metamask Wallet\n4) Send your Metamask Wallet address in this chat like this (#EthAddress):\ne.g. #0x0e1aFDCD7BCa770aD9DD17d04c6F82816B156D47\nI hope you find it useful!\nPlease get in touch if you have any questions.\n\nFrom,\nCricShot.
     """.strip()
 
     # print('messages:')
