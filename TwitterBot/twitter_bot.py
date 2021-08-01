@@ -184,17 +184,19 @@ def replyToTweets():
 
 
 # Script Runner
-while True:
-    replyToTweets()
-    n = random.randint(1, 10)
-    time.sleep(n)
+# Uncomment this only when you have to perform the giveaway
+# while True:
+#     replyToTweets()
+#     n = random.randint(1, 10)
+#     time.sleep(n)
 
+# call this only when not performing any giveaways
 # NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(1)
-# # api.update_status(
-# #     status="Hey All, checkout our latest NFT, Rishabh Pant's Historical Winning Shot at Gabba!\n Buy it now on OpenSea, Link: " + NFTfetcher)
 
+# When you have to tweet about the new giveaway uncomment this
 # api.update_with_media("pic1.jpg", status="Hey All, Participate to our latest NFT Giveaway!! " +
 #                       NFTfetcher + "\nTo participate, all you have to retweet this tweet and follow our account!")
 
-# # api.update_with_media(
-# #     "pic1.jpg", status="Hey All, checkout our latest NFT, " + NFTfetcher + "\nBuy it now on OpenSea")
+# When a new NFT is minted, to tweet uncomment this
+# api.update_with_media(
+#     "pic1.jpg", status="Hey All, checkout our latest NFT, " + NFTfetcher + "\nBuy it now on OpenSea")
