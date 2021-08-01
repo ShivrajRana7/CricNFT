@@ -39,11 +39,13 @@
    <h3 align="center">PANDIT DEENDAYAL ENERGY UNIVERSITY ,GANDHINAGAR </h3>
 
   <p align="center">
-    The exchange of student credentials is an essential and fundamental process of an educational environment that involves multiple stakeholders such as students, schools, instructors, companies, etc. As of today, the procedure is complicated, time-consuming, error-prone and not foolproof. To fix security concerns related to the sharing of student credentials, we incorporate blockchain technology.
+    CricShot is a blockchain-based platform that allows fans to buy, sell and trade numbered versions of specific NFTs through OpenSea by deploying them on nft.storage of Filecoin, video highlights of IPL and some more major tournaments. Once you purchase an NFT, those highlights go into your encrypted, secure highlight wallet to be "showcased" or re-sold on OpenSea.
 
-Our work suggests a futuristic and pragmatic blockchain architecture for the safe sharing of student credentials and introduces a prototype as a decentralized application (DApp ) based on blockchain .
+Right after a match ends, CricShot mints new NFTs on Polygon Network which will be done season to season.
 
-Experiments on Ethereum will be carried out to test the accuracy of the DApp and evaluate the costs to understand the execution time. The results implies that the existing education system can be enhanced by such a simple, ubiquitous yet secure and user-friendly Blockchain-based DApp and all the stakeholders would reap tremendous benefits.
+CricShot, besides a NFT minter, is also a multi-purpose Twitter bot that can trade the best moments of cricket world besides pushing forward the user engagement of a decentralized ecosystem through portraying virtual moments, powered by Polygon Network.
+
+Also, CricShot Twitter bot is here to automate tasks for you the really cool thing about our NFT giveaways is that it actually picks "RANDOM" users using the ChainLink's VRF, to spice up, after processing the random number from the API, we are allocating them onto a dictionary object containing tokenIDs of NFT, which through the processed number, will be eligible to take it away, dope isn’t it? To put the verifiable randomness of blockchain to use.
 <br />
 <a href="https://github.com/ShivrajRana7/CricNFT"><strong>Explore the docs »</strong></a>
 <br />
