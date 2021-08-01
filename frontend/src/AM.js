@@ -2,8 +2,63 @@ import React from 'react';
 import {Navbar,Nav,Container} from 'react-bootstrap';
 import './AM.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useRef, useEffect, useState } from "react";
+import axios from 'axios';
+import videoUrl from "./assets/NFT_Not_Found.mp4";
 
-function Am(){
+
+function Am({accountObject,web3Object, cricContract}){
+	let web3 = web3Object;
+	const [isLoading1,setLoading1] = useState(false);
+
+
+	const [video1,setVideoUrl1] = useState(""); 
+
+
+	useEffect(() => {
+     
+		getData1();
+	   
+	
+	
+
+		
+	
+	  
+	},[]);
+
+	async function getData1() {
+		setLoading1(true);
+		console.log(cricContract);
+		try {
+		var data = await cricContract.methods.tokenURI(0).call();
+		console.log(data);
+	    var videoUrl = await getRequest(data);
+		setVideoUrl1(videoUrl);
+		setLoading1(false);
+	    
+		}catch(e){
+		 setVideoUrl1(videoUrl);
+		// setLoading1(false);
+		}
+	  }
+
+	  
+
+
+	  
+    
+	  async function getRequest(url) {
+	
+			
+			var response = await axios.get(url);
+		
+			
+			console.log(response.data["image"]);
+			var videoUrl = response.data["image"];
+		
+		return videoUrl;
+	   }
 
     return(
 
@@ -31,13 +86,11 @@ function Am(){
 			
       		<div className="div-3">
       			<div className="row">
-					<div className="col-sm-2">
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-        						
-      						</div>
-    					</div>
-  					</div>
+				  {
+						isLoading1 ? <ErrorComponent></ErrorComponent> : <ImageAssetComponent url={video1}></ImageAssetComponent>
+					}
+
+
 
 				</div>
       		</div>
@@ -47,6 +100,31 @@ function Am(){
 		</Container>
 	
 		</div>
+	)
+}
+
+
+const ImageAssetComponent = ({url}) => {
+	return ( 
+		<div className="col-sm-2" >
+	<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+		  <div className="card-body">
+			 <video src={url} style={{height : "400px"}} autoPlay muted controls="true"></video>
+		  </div>
+	</div>
+  </div>
+ );
+}
+
+const ErrorComponent = () => {
+	return (
+		<div className="col-sm-2" >
+		<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+			  <div className="card-body">
+				 <video src={videoUrl} style={{height : "400px"}} autoPlay muted controls="true"></video>
+			  </div>
+		</div>
+	  </div>
 	)
 }
 
