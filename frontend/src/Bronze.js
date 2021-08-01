@@ -107,15 +107,15 @@ function Bronze({accountObject,web3Object, cricContract}){
       		<div className="div-3">
       			<div className="row">
 				  {
-						isLoading1 ? <ErrorComponent></ErrorComponent> : <ImageAssetComponent url={video1}></ImageAssetComponent>
+						isLoading1 ? <ErrorComponent></ErrorComponent> : <ImageAssetComponent url={video1} url2="https://testnets.opensea.io/assets/mumbai/0xec51debc1a239389dc82e475f39787d9e31d2df5/0"></ImageAssetComponent>
 					}
 
 {
-						isLoading2 ? <ErrorComponent></ErrorComponent> : <ImageAssetComponent url={video2}></ImageAssetComponent>
+						isLoading2 ? <ErrorComponent></ErrorComponent> : <ImageAssetComponent url={video2} url2="https://testnets.opensea.io/assets/mumbai/0xec51debc1a239389dc82e475f39787d9e31d2df5/1"></ImageAssetComponent>
 					}
 
 {
-						isLoading3 ? <ErrorComponent></ErrorComponent> : <ImageAssetComponent url={video3}></ImageAssetComponent>
+						isLoading3 ? <ErrorComponent></ErrorComponent> : <ImageAssetComponent url={video3} url2="https://testnets.opensea.io/assets/mumbai/0xec51debc1a239389dc82e475f39787d9e31d2df5/2"></ImageAssetComponent>
 					}
 					{/* <div className="col">
     					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
@@ -227,14 +227,16 @@ const ErrorComponent = () => {
 	  </div>
 	)
 }
-const ImageAssetComponent = ({url}) => {
+const ImageAssetComponent = ({url,url2}) => {
 	return ( 
 		<div className="col-sm-2" >
+				<a href={url2} target="_blank">
 	<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
 		  <div className="card-body">
 			 <video src={url} style={{height : "400px"}} autoPlay muted controls="true"></video>
 		  </div>
 	</div>
+	</a>
   </div>
  );
 }
