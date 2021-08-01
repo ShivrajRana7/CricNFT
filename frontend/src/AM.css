@@ -1,7 +1,7 @@
-.vk{
+.am{
 	background: #020305;
 	width: 100%;
-	min-height: 220vh;
+	min-height: 190vh;
 }
 .div-2{
 	margin: 50px 0;
@@ -18,6 +18,6 @@
 .div-3 .row{
 	margin-top: 100px;
 	display: grid;
-	grid-template-columns: auto auto auto auto;
+	grid-template-columns: auto auto auto;
     grid-row-gap: 100px;
 }

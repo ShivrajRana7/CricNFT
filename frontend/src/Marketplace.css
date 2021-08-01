@@ -1,31 +1,43 @@
-.div{
-	background: #020305;
-	width: 100%;
-	height: 250vh;
-}
-.div-1{
-	margin-top: 60px;
-	text-align: center;
-}
-.div-1 hr{
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+.section hr{
 	padding: 5px;
 }
-.div-2{
-	margin: 100px;
+.tier{
+	margin-top: 100px;
+	font-family: 'Orbitron', sans-serif;
+}
+.tier hr{
+	padding: 3px;
+	width: 5%;
+	color: #51E8EF;
+}
+.div-2 .row{
+	/* display: grid;
+	grid-template-columns: auto auto;
+	grid-column-gap: 450px; */
+}
+.div-2 .row .card{
+	margin: 50px 0;
 }
 .div-2 hr{
 	padding: 3px;
 	width: 5%;
 	color: #51E8EF;
 }
-.div-2 .row{
-	margin-top: 100px;
+.div-2 .row .card .gold-btn{
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
-.div-2 .row .card{
-	border: 5px solid ;
+.player{
+	margin-top: 50px;
+	font-family: 'Orbitron', sans-serif;
 }
-.div-3{
-	margin: 100px;
+.player hr{
+	padding: 3px;
+	width: 5%;
+	color: #51E8EF;
 }
 .div-3 hr{
 	padding: 3px;
@@ -33,13 +45,11 @@
 	color: #51E8EF;
 }
 .div-3 .row{
-	margin-top: 100px;
 	display: grid;
-	grid-template-columns: auto auto auto auto auto;
-}/*
-.footer{
-	color: #ffffff;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}*/
+	grid-template-columns: auto auto auto auto;
+}
+.btn-l{
+	position:absolute;
+	bottom: -30%;
+	left: 17%;
+}
