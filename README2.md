@@ -30,10 +30,10 @@
 <br />
 <p align="center">
   <a href="https://github.com/ShivrajRana7/CricNFT">
-    <img src="images/dLogo.png" alt="Logo" width="80" height="80">
+    <img src="images/CS.png" alt="Logo" width="80" height="80">
   </a>
-    <h2 align="center">DMatrix</h2>
-  <h3 align="center">Blockchain Based DApp for Secure Sharing of Student Credentials</h3>
+    <h2 align="center">CricShot</h2>
+  <h3 align="center">A revolutionary new experience in which jaw-dropping cricket moments and unforgettable highlights become collectibles that you can own forever!</h3>
    <h4 align="center">By</h4>
   <h3 align="center">Team Genesis</h3>
    <h3 align="center">PANDIT DEENDAYAL ENERGY UNIVERSITY ,GANDHINAGAR </h3>
@@ -82,29 +82,16 @@ Experiments on Ethereum will be carried out to test the accuracy of the DApp and
   </ol>
 </details>
 
-<!-- ABOUT THE PROJECT -->
-
-## About The Project
-
-  <a href="https://github.com/ShivrajRana7/CricNFT">
-    <img src="images/About1.PNG" alt="Logo">
-  </a>
-
-<h6 align="center">Usecase and Scalability of the Idea</h6>
-<p>Our aim is to leverage blockchain technology to mitigate the existing security-related issues concerning the sharing of students’ credentials. Thus, the project proposes a tamper-proof, immutable, authentic, non-repudiable, privacy protected and easy to share blockchain-based architecture for secured sharing of students’ credentials. To increase the scalability, the proposed system uses a secure off-chain storage mechanism(IPFS). The performance and viability of the proposed architecture is analyzed by using an Ethereum based prototypical implementation.
-
-Its main use case can be explained with an instance; when a student applies for a job, the company carefully checks the authenticity of the received credentials. If required, the company may contact the host institution by phone-call or email to endorse the validity of the credentials. In spite of following such a tedious process, the overall system is insecure, and is facing difficulty to deal with tampered and fake credentials. Hence, numerous advantages can be gained from the use of blockchain in education are immutability and provenance of uploaded credentials, peer-to-peer and secure interactions between stakeholders, transparency and trust within the system, and decentralized control with distributed digital ledger.
-
-</p>
-
 ### Built With
 
-- [Metamask]()
+- [Web3py]()
 - [Web3js]()
 - [Solidity]()
-- [IPFS]()
-- [Ethereum]()
-
+- [Filcoin's nft.storage]()
+- [Polygon]()
+- [Chainlink]()
+- [REACT]()
+- [tweepy]()
 <!-- GETTING STARTED -->
 
 ## Getting Started
