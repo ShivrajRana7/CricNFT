@@ -52,7 +52,7 @@ function Giveaway(){
                     <div className="left">
                         <div className="card" style={{background : "#020305" ,width : "30rem", height : "30rem"}}>
                             <div className="card-body">
-
+                                <img src="./Images/cs.png" style={{width : "450px", height : "450px"}} />
                             </div>
                         </div>
                     </div>

@@ -8,18 +8,11 @@ import Silver from './Silver.js';
 import Bronze from './Bronze.js';
 import Legendary from './Legendary.js';
 import Ms from './MS.js';
-import Rs from './RS';
 import Vk from './VK';
 import Hp from './HP';
-import Rp from './RP';
-import Sr from './SR';
-import Ar from './AR.js';
 import Am from './AM';
 import Rj from './RJ.js';
-import Mp from './MP.js';
-import Ps from './PS.js';
 import Ds from './DS.js';
-import Kp from './KP.js';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import Web3 from'web3';
 import {useState,useEffect} from 'react';
@@ -58,10 +51,6 @@ function App() {
    setCricContract(cContract);
    console.log(cContract);
  
-
- 
- 
- 
   }
    
   async function loadBlockchainData() {
@@ -88,6 +77,7 @@ function App() {
           <Route path="/Marketplace" component={Marketplace} />
           <Route path="/giveaway" component={Giveaway} />
           <Route path="/about" component={About} />
+          
           {/* <Route path="/gold-tier" component={Gold} /> */}
           <Route path="/gold-tier" render={(props) => <Gold accountObject={web3objectDetails} web3Object ={web3} cricContract={cricContract}/>} />
  
@@ -96,35 +86,30 @@ function App() {
  
           {/* <Route path="/bronze-tier" component={Bronze} /> */}
           <Route path="/bronze-tier" render={(props) => <Bronze accountObject={web3objectDetails} web3Object ={web3} cricContract={cricContract}/>} />
+          
           <Route path="/legendary-tier" render={(props) => <Legendary accountObject={web3objectDetails} web3Object ={web3} cricContract={cricContract}/>} />
- 
           {/* <Route path="/legendary-tier" component={Legendary} /> */}
+          
           {/* <Route path="/ms-dhoni" component={Ms} /> */}
           <Route path="/ms-dhoni" render={(props) => <Ms accountObject={web3objectDetails} web3Object ={web3} cricContract={cricContract}/>} />
-          <Route path="/rohit-sharma" component={Rs} />
+          
           <Route path="/virat-kholi" render={(props) => <Vk accountObject={web3objectDetails} web3Object ={web3} cricContract={cricContract}/>} />
-
           {/* <Route path="/virat-kholi" component={Vk} /> */}
+          
           {/* <Route path="/hardik-pandya" component={Hp} /> */}
           <Route path="/hardik-pandya" render={(props) => <Hp accountObject={web3objectDetails} web3Object ={web3} cricContract={cricContract}/>} />
 
-          <Route path="/rishabh-pant" component={Rp} />
-          <Route path="/suresh-raina" component={Sr} />
-
-
-          <Route path="/ambati-rayudu" component={Ar} />
           {/* <Route path="/amit-mishra" component={Am} /> */}
           <Route path="/amit-mishra" render={(props) => <Am accountObject={web3objectDetails} web3Object ={web3} cricContract={cricContract}/>} />
+          
           <Route path="/ravindra-jadeja" render={(props) => <Rj accountObject={web3objectDetails} web3Object ={web3} cricContract={cricContract}/>} />
-
           {/* <Route path="/ravindra-jadeja" component={Rj} /> */}
-          <Route path="/manish-pandey" component={Mp} />
-          <Route path="/prithivi-shaw" component={Ps} />
+
           <Route path="/dwayne-smith" render={(props) => <Ds accountObject={web3objectDetails} web3Object ={web3} cricContract={cricContract}/>} />
 
           {/* <Route path="/dwayne-smith" component={Ds} /> */}
-          <Route path="/kieron-pollard" component={Kp} />
-        </Switch>
+          
+          </Switch>
       </Router>
       
     </div>

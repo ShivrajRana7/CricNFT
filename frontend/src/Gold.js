@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useRef, useEffect, useState } from "react";
 import axios from 'axios';
 import videoUrl from "./assets/NFT_Not_Found.mp4";
+import { Button } from 'bootstrap';
 
 
 
@@ -22,11 +23,7 @@ function Gold({accountObject,web3Object, cricContract}){
      
 		getData1();
 	    getData2();
-		getData3();
-	
-
-		
-	
+		getData3();	
 	  
 	},[]);
 
@@ -115,8 +112,7 @@ function Gold({accountObject,web3Object, cricContract}){
 {
 						isLoading3 ? <ErrorComponent></ErrorComponent> : <ImageAssetComponent url={video3}></ImageAssetComponent>
 					}
-
-
+					
 				</div>
       		</div>
 			<br />
@@ -128,7 +124,7 @@ function Gold({accountObject,web3Object, cricContract}){
 const ErrorComponent = () => {
 	return (
 		<div className="col-sm-2" >
-		<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+		<div className="cardd" style={{width : "15rem", height : "25rem"}}>
 			  <div className="card-body">
 				 <video src={videoUrl} style={{height : "400px"}} autoPlay muted controls="true"></video>
 			  </div>
@@ -140,7 +136,7 @@ const ErrorComponent = () => {
 const ImageAssetComponent = ({url}) => {
 	return ( 
 		<div className="col-sm-2" >
-	<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+		<div className="cardd" style={{width : "15rem", height : "25rem"}}>
 		  <div className="card-body">
 			 <video src={url} style={{height : "400px"}} autoPlay muted controls="true"></video>
 		  </div>

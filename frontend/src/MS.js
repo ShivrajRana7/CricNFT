@@ -1,10 +1,12 @@
 import React from 'react';
 import {Navbar,Nav,Container} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './MS.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useRef, useEffect, useState } from "react";
 import axios from 'axios';
 import videoUrl from "./assets/NFT_Not_Found.mp4";
+import { Button } from 'bootstrap';
 
 
 function Ms({accountObject,web3Object, cricContract}){
@@ -116,22 +118,6 @@ function Ms({accountObject,web3Object, cricContract}){
 						isLoading2 ? <ErrorComponent></ErrorComponent> : <ImageAssetComponent url={video2}></ImageAssetComponent>
 					}
 
-  					<div className="col-sm-2">
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-      							
-        					</div>
-    					</div>
-  					</div>
-
-  					<div className="col-sm-2">
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-           						
-      						</div>
-    					</div>
-  					</div>
-
 				</div>
       		</div>
 
@@ -141,25 +127,33 @@ function Ms({accountObject,web3Object, cricContract}){
 	)
 }
 const ErrorComponent = () => {
+
+	let ms1 = "https://testnets.opensea.io/assets/mumbai/0xec51debc1a239389dc82e475f39787d9e31d2df5/3";
 	return (
 		<div className="col-sm-2" >
-		<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+		<a href={ms1} target="_blank">
+		<div className="cardd" style={{width : "15rem", height : "25rem"}}>
 			  <div className="card-body">
 				 <video src={videoUrl} style={{height : "400px"}} autoPlay muted controls="true"></video>
 			  </div>
 		</div>
+		</a>
 	  </div>
 	)
 }
 
 const ImageAssetComponent = ({url}) => {
+
+	let ms2 = "https://testnets.opensea.io/assets/mumbai/0xec51debc1a239389dc82e475f39787d9e31d2df5/9";
 	return ( 
 		<div className="col-sm-2" >
-	<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+		<a href={ms2} target="_blank">
+		<div className="cardd" style={{width : "15rem", height : "25rem"}}>
 		  <div className="card-body">
 			 <video src={url} style={{height : "400px"}} autoPlay muted controls="true"></video>
 		  </div>
-	</div>
+		</div>
+	</a>
   </div>
  );
 }

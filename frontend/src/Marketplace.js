@@ -24,10 +24,9 @@ function Marketplace(){
       			<div className="row">
 				  <div className="">
 					  	<Link to="legendary-tier" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "80rem", height : "12rem"}}>
+    					<div className="cardd" style={{width : "80rem", height : "15rem"}}>
       						<div className="card-body">
-           						<h3 className="card-titlee"><span style={{color:"#0275d8"}}>Legendary Tier</span></h3>
-      							<hr />
+								<img src="./Images/Legendary_Poster.png" style={{width : "78rem", height : "10rem"}} />
       						</div>
     					</div>
 						</Link>
@@ -35,10 +34,9 @@ function Marketplace(){
 
 					<div className="">
 					<Link to="gold-tier" style={{ textDecoration: 'none' }}>
-						<div className="card" style={{background : "#000000", width : "80rem", height : "12rem"}}>
+						<div className="cardd" style={{width : "78rem", height : "15rem"}}>
       						<div className="card-body">
-        						<h3 className="card-titlee"><span style={{color:"#FFD700",opacity : "75%"}}>Gold Tier</span></h3>
-      							<hr />
+							  <img src="./Images/Gold_Poster.png" style={{width : "78rem", height : "10rem"}} />
       						</div>
     					</div>
 					</Link>
@@ -46,10 +44,9 @@ function Marketplace(){
 
   					<div className="">
 					  <Link to="silver-tier" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "80rem", height : "12rem"}}>
+    					<div className="cardd" style={{width : "78rem", height : "15rem"}}>
       						<div className="card-body">
-      							<h3 className="card-titlee"><span style={{color:"#C0C0C0"}}>Silver Tier</span></h3>
-        						<hr />
+							  <img src="./Images/Silver_Poster.png" style={{width : "78rem", height : "10rem"}} />
         					</div>
     					</div>
 						</Link>
@@ -57,10 +54,9 @@ function Marketplace(){
 
   					<div className="">
 					  <Link to="bronze-tier" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "80rem", height : "12rem"}}>
+    					<div className="cardd" style={{width : "78rem", height : "15rem"}}>
       						<div className="card-body">
-           						<h3 className="card-titlee"><span style={{color:"#CD7F32"}}>Bronze Tier</span></h3>
-      							<hr />
+							  <img src="./Images/Bronze_Poster.png" style={{width : "78rem", height : "10rem"}} />
       						</div>
     					</div>
 						</Link>
@@ -77,35 +73,19 @@ function Marketplace(){
       			<div className="row">
 					<div className="col">
 						<Link to="/ms-dhoni" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+    					<div className="cardd" id="msp" style={{width : "15rem", height : "25rem"}}>
       						<div className="card-body">
-        						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>M</span>S</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>7</h6>
-      							<hr />
+								<img src="./Images/MS_Dhoni_Poster.png" style={{width : "15rem", height : "25rem"}} />
       						</div>
     					</div>
 						</Link>
   					</div>
 
   					<div className="col">
-						<Link to="/rohit-sharma" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-      							<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>R</span>S</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>45</h6>
-        						<hr />
-        					</div>
-    					</div>
-						</Link>
-  					</div>
-
-  					<div className="col">
 					  	<Link to="/virat-kholi" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+    					<div className="cardd" style={{width : "15rem", height : "25rem"}}>
       						<div className="card-body">
-           						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>V</span>K</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>18</h6>
-      							<hr />
+							  <img src="./Images/Virat_Kohli.png" style={{width : "15rem", height : "25rem"}} />
       						</div>
     					</div>
 						</Link>
@@ -113,47 +93,9 @@ function Marketplace(){
 
   					<div className="col">
 						<Link to="/hardik-pandya" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+    					<div className="cardd" style={{width : "15rem", height : "25rem"}}>
       						<div className="card-body">
-           						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>H</span>P</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>33</h6>
-      							<hr />
-      						</div>
-    					</div>
-						</Link>
-  					</div>
-
-					<div className="col">
-						<Link to="/rishabh-pant" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-           						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>R</span>P</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>17</h6>
-      							<hr />
-      						</div>
-    					</div>
-						</Link>
-  					</div>
-
-					<div className="col">
-						<Link to="/suresh-raina" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-           						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>S</span>R</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>17</h6>
-      							<hr />
-      						</div>
-    					</div>
-						</Link>
-  					</div>
-
-					<div className="col">
-						<Link to="/ambati-rayudu" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-           						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>A</span>R</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>5</h6>
-      							<hr />
+							  <img src="./Images/hardik_Pandya.png" style={{width : "15rem", height : "25rem"}} />
       						</div>
     					</div>
 						</Link>
@@ -161,11 +103,9 @@ function Marketplace(){
 
 					<div className="col">
 						<Link to="/amit-mishra" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+    					<div className="cardd" style={{width : "15rem", height : "25rem"}}>
       						<div className="card-body">
-           						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>A</span>M</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>99</h6>
-      							<hr />
+							  <img src="./Images/Amit_Mishra.png" style={{width : "15rem", height : "25rem"}} />
       						</div>
     					</div>
 						</Link>
@@ -173,35 +113,9 @@ function Marketplace(){
 
 					<div className="col">
 						<Link to="/ravindra-jadeja" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+    					<div className="cardd" style={{width : "15rem", height : "25rem"}}>
       						<div className="card-body">
-           						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>R</span>J</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>8</h6>
-      							<hr />
-      						</div>
-    					</div>
-						</Link>
-  					</div>
-
-					<div className="col">
-						<Link to="/manish-pandey" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-           						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>M</span>P</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>21</h6>
-      							<hr />
-      						</div>
-    					</div>
-						</Link>
-  					</div>
-
-					<div className="col">
-						<Link to="/prithivi-shaw" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-           						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>P</span>S</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>100</h6>
-      							<hr />
+							  <img src="./Images/Jadeja_Poster.png" style={{width : "15rem", height : "25rem"}} />
       						</div>
     					</div>
 						</Link>
@@ -209,23 +123,9 @@ function Marketplace(){
 
 					<div className="col">
 						<Link to="/dwayne-smith" style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+    					<div className="cardd" style={{width : "15rem", height : "25rem"}}>
       						<div className="card-body">
-           						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>D</span>S</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>50</h6>
-      							<hr />
-      						</div>
-    					</div>
-						</Link>
-  					</div>
-					
-					<div className="col">
-						<Link to="/kieron-pollard"  style={{ textDecoration: 'none' }}>
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-           						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>K</span>P</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>55</h6>
-      							<hr />
+							  <img src="./Images/Dwayne_Smith.png" style={{width : "15rem", height : "25rem"}} />
       						</div>
     					</div>
 						</Link>

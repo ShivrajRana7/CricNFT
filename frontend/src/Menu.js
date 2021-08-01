@@ -8,7 +8,7 @@ function Menu() {
 	return(
 			<Navbar>
   			<Container>
-    			<Navbar.Brand as={Link} to="/" style={{color : "#ffffff"}}><img src="./Images/cs.png" style={{width : "60px", height : "45px", paddingRight : "15px"}} />CRIC<span style={{color:"#51E8EF"}}>SHOT</span></Navbar.Brand>
+    			<Navbar.Brand as={Link} to="/" style={{color : "#ffffff"}}>CRIC<span style={{color:"#51E8EF"}}>SHOT</span></Navbar.Brand>
     				<Nav className="mr-auto">
         				<Nav.Link as={Link} to="/Marketplace" style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>M</span>ARKETPLACE</Nav.Link>
         				<Nav.Link as={Link} to="/giveaway" style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>G</span>IVEAWAYS</Nav.Link>

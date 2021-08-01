@@ -48,3 +48,8 @@
 	display: grid;
 	grid-template-columns: auto auto auto auto;
 }
+.btn-l{
+	position:absolute;
+	bottom: -30%;
+	left: 17%;
+}

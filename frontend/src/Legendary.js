@@ -1,5 +1,6 @@
 import React from 'react';
 import {Navbar,Nav,Container} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import './Legendary.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useRef, useEffect, useState } from "react";
@@ -18,10 +19,6 @@ function Legendary({accountObject,web3Object, cricContract}){
 	useEffect(() => {
      
 		getData1();
-	
-	
-
-		
 	
 	  
 	},[]);
@@ -71,29 +68,9 @@ function Legendary({accountObject,web3Object, cricContract}){
       			<div className="row">
 				  {
 						isLoading1 ? <ErrorComponent></ErrorComponent>: <ImageAssetComponent url={video1}></ImageAssetComponent>
-					}
-
-
-					{/* <div className="col-sm-2">
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-        						<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>M</span>S</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>07</h6>
-      							<hr />
-      						</div>
-    					</div>
-  					</div>
-
-  					<div className="col-sm-2">
-    					<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
-      						<div className="card-body">
-      							<h4 className="card-titlee" style={{color:"#ffffff"}}><span style={{color:"#51E8EF"}}>S</span>T</h4>
-      							<h6 className="card-titlee" style={{color:"#ffffff"}}>10</h6>
-        						<hr />
-        					</div>
-    					</div>
-  					</div> */}
-
+						
+				}
+				
 				</div>
       		</div>
 			</div> 
@@ -104,7 +81,7 @@ function Legendary({accountObject,web3Object, cricContract}){
 const ErrorComponent = () => {
 	return (
 		<div className="col-sm-2" >
-		<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+		<div className="cardd" style={{width : "15rem", height : "25rem"}}>
 			  <div className="card-body">
 				 <video src={videoUrl} style={{height : "400px"}} autoPlay muted controls="true"></video>
 			  </div>
@@ -116,7 +93,7 @@ const ErrorComponent = () => {
 const ImageAssetComponent = ({url}) => {
 	return ( 
 		<div className="col-sm-2" >
-	<div className="card" style={{background : "#000000", width : "15rem", height : "25rem"}}>
+		<div className="cardd" style={{width : "15rem", height : "25rem"}}>
 		  <div className="card-body">
 			 <video src={url} style={{height : "400px"}} autoPlay muted controls="true"></video>
 		  </div>
