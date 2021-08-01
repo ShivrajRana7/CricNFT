@@ -86,7 +86,7 @@ function Giveaway(){
                         <h2 style={{color : "#ffffff"}}><span style={{color:"#51E8EF"}}>C</span>RICKET <span style={{color:"#51E8EF"}}>Q</span>UEST</h2>
                         <br /><br />
                         <h5 style={{color : "#ffffff"}}>Win Exclusive and memorable cricket moment <span style={{color:"#51E8EF"}}>NFT's</span></h5>
-                        <p style={{color : "#ffffff"}}>To Participate in the Giveaway, checkout out <span style={{color:"#51E8EF"}}>T</span>WITTER Handle : </p>
+                        <p style={{color : "#ffffff"}}>To Participate in the Giveaway, checkout out <span style={{color:"#51E8EF"}}>T</span>WITTER Handle : <a href = "https://twitter.com/CricShot4/status/1421874232397471753?s=20">Here</a> </p>
                     </div>
                 </div>
     		</div>

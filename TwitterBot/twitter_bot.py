@@ -191,12 +191,12 @@ def replyToTweets():
 #     time.sleep(n)
 
 # call this only when not performing any giveaways
-# NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(1)
+NFTfetcher = OpenSeaFetcher.OpenSeaFetchingSchema(7)
 
 # When you have to tweet about the new giveaway uncomment this
-# api.update_with_media("pic1.jpg", status="Hey All, Participate to our latest NFT Giveaway!! " +
-#                       NFTfetcher + "\nTo participate, all you have to retweet this tweet and follow our account!")
+api.update_with_media("pic1.jpg", status="Hey All, Participate to our latest NFT Giveaway!! " +
+                      "Jadeja's phenomenal wicket of ABD!" + "\nTo participate, all you have to retweet this tweet and follow our account!")
 
 # When a new NFT is minted, to tweet uncomment this
 # api.update_with_media(
-#     "pic1.jpg", status="Hey All, checkout our latest NFT, " + NFTfetcher + "\nBuy it now on OpenSea")
+#     "pic1.jpg", status="Hey All, checkout our latest NFT, " + NFTfetcher + "\nBuy it now on OpenSea \nLink: https://testnets.opensea.io/assets/mumbai/0xec51debc1a239389dc82e475f39787d9e31d2df5/6")

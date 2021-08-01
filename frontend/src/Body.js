@@ -31,9 +31,9 @@ function Slider(){
 				<hr /><br />
 
 				<div className="twitter">
-					<TweetEmbed className="tweet" id="1417901839224242180" options={{theme: 'dark' }} />
-					<TweetEmbed className="tweet" id="1417901839224242180" options={{theme: 'dark' }} />
-					<TweetEmbed className="tweet" id="1417901839224242180" options={{theme: 'dark' }} />
+					<TweetEmbed className="tweet" id="1421872065930436614" options={{theme: 'dark' }} />
+					<TweetEmbed className="tweet" id="1421872468143214596" options={{theme: 'dark' }} />
+					<TweetEmbed className="tweet" id="1421871710521880581" options={{theme: 'dark' }} />
 				</div>
 				<br /><hr />
 				
