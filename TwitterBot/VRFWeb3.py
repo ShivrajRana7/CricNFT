@@ -16,7 +16,7 @@ nonce = w3.eth.get_transaction_count(
 print(w3.isConnected())
 
 contract_address = "0x893A22865095fe6Fa1493A0671132cD13990BD3d"
-private_key = "8d0dfa4ce5ae81f16a204f65eba2b034eb429a1fa37108e6ddf64ffda7f1a8ca"
+private_key = ""
 
 # with open("RandomNumberConsumer.json") as f:
 #     abi = json.load(f)
